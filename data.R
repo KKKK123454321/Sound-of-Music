@@ -1,4 +1,3 @@
-
 songs=read.csv('analysisData.csv')
 
 songs=songs[!is.na(songs$genre),]
@@ -6,20 +5,15 @@ songs=songs[!is.na(songs$genre),]
 ngroup=c()
 
 for (i in 1:nrow(songs)) {
-  group=songs$genre[i] #第i首歌的genre
-  a=substring(group,3,(nchar(group)-2)) #去掉[]
-  b=strsplit(gsub('[, ]', '', a),split = "''")[[1]] #去掉间隔逗号
-  ngroup=c(ngroup,length(b)) #第i首歌有几个genre
+  group=songs$genre[i]
+  a=substring(group,3,(nchar(group)-2))
+  b=strsplit(gsub('[, ]', '', a),split = "''")[[1]]
+  ngroup=c(ngroup,length(b))
 }
 
 newsongs=cbind(songs,ngroup)
 
 library(stringr)
-
-#group=songs$genre[1]
-#a=substring(group,3,(nchar(group)-2))
-#b=strsplit(gsub('[, ]', '', a),split = "''")[[1]] 
-
 val=c()
 for (i in 1:nrow(songs)) {
   group=songs$genre[i]
@@ -29,8 +23,8 @@ for (i in 1:nrow(songs)) {
   
 }
 
-index=duplicated(val)#查找重复位置
-single=val[!index] #去除所有重复位置的数据
+index=duplicated(val)
+single=val[!index]
 
 newsongs[,(ncol(newsongs)+1):(ncol(newsongs)+length(single))]=0
 
@@ -51,7 +45,7 @@ dd=as.matrix(d)
 
 newsongs=cbind(newsongs[,1:20],newsongs[,rownames(dd)[d>200]]) 
 
-sort(d) # 保留d 向量中和大于 200 的列
+sort(d)
 
 #############
 
@@ -91,7 +85,6 @@ summary(model)
 
 library (car)
 vif(model,type = 'predictor')
-#检验是否存在多重共线性
 
 colnames(newsongs)[colnames(newsongs)=="r&b"]="r_b"
 colnames(newsongs)[colnames(newsongs)=="singer-songwriter"]="singer_songwriter"
@@ -160,7 +153,7 @@ pred=predict(model, data=newsongs, num.trees = num_trees)
 
 RMSE(newsongs$rating,pred$predictions)
 
-#############预测
+#############Predict
 
 scoringData = read.csv('scoringData.csv')
 
