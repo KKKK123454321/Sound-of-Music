@@ -3,8 +3,6 @@ Kaggle Sound of Music Competition - Predict the rating of songs based on their a
 
 Link to the competition: https://www.kaggle.com/competitions/musiclala2023/overview
 
-Initial place on leaderboard: 7/68
-
 File descriptions:
 
   analysisData.csv: Data for building a model
