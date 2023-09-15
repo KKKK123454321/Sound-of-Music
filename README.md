@@ -1,4 +1,5 @@
 # Predict the rating of songs
+The final placement on the leaderboard: 7/68 (RMSE: 14.5). An improved version can achive a RMSE of 12 (1/68).
 
 ## 1. Introduction
 This report outlines the process undertaken to predict rating of songs based on their auditory features. This project was based on a dataset consisting of 19 features related to the property, the host and reviews of over 21000 songs. The goal was to develop a supervised machine learning model that resulted in the lowest root mean squared error (RMSE) on a previously unseen dataset of songs' features.
