@@ -33,7 +33,7 @@ Feature engineering was used to create meaningful additional features from text 
   - [ ] the number of trees (num_trees)
   - [ ] the number of predictors used in each random forest (mtry) : if the current model achieves a higher R-squared value (r.squared) than the previously best model, the corresponding mtry value and R-squared value are updated.
 
-### Final remarks
+## 3. Final remarks
 Update on 9/15/2023: 
 If the original dataset contains brief descriptions of the songs, Natural Language Processing techniques can be more useful to lower the RMSE. However, we can also apply NLP techniques on the songs title and genre in the current dataset:
 - [ ] Named Entity Recognition (NER): Identify entities with specific meanings in the song titles and genre, such as locations, names of people, or organizations. This information can be used to construct corresponding textual features.
