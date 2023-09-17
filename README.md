@@ -35,7 +35,7 @@ Feature engineering was used to create meaningful additional features from text 
 
 ## 3. Final remarks
 Updated on 9/15/2023: 
-If the original dataset contains brief descriptions of the songs, Natural Language Processing techniques can be more useful to lower the RMSE. However, we can also apply NLP techniques on the songs title and genre in the current dataset:
+If the original dataset includes succinct song descriptions, employing Natural Language Processing (NLP) techniques can be highly advantageous in reducing the RMSE. Nonetheless, it is equally viable to apply NLP techniques to the song titles and genres within the existing dataset.
 - [ ] Named Entity Recognition (NER): Identify entities with specific meanings in the song titles and genre, such as locations, names of people, or organizations. This information can be used to construct corresponding textual features.
 - [ ] Sentiment Analysis: Analyze the sentiment polarity (positive or negative) in the song titles. Libraries like VADER or TextBlob can be utilized to perform sentiment analysis and incorporate the sentiment polarity as textual features.
 
